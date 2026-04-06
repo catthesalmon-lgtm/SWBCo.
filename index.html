@@ -3,21 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SWB Co. | Smart Water Bottle</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>SWB Co. | Smart Hydration</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #0a0f1f;
+    background: linear-gradient(180deg, #1e3a5f, #2f80ed, #27ae60);
     color: white;
+    overflow-x: hidden;
 }
 
 /* NAV */
@@ -28,173 +33,262 @@ nav {
     align-items: center;
 }
 
-nav h1 {
-    font-family: 'Fredoka', sans-serif;
+.brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
-    opacity: 0.8;
+    margin-left: 25px;
+    opacity: 0.85;
+    font-size: 14px;
 }
 
-/* HERO SPLIT */
+nav a:hover {
+    opacity: 1;
+}
+
+/* HERO */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 50px;
-    flex-wrap: wrap;
+    text-align: center;
+    padding: 100px 20px 60px;
 }
 
-.hero-text {
-    max-width: 500px;
-}
-
-.hero h2 {
-    font-size: 52px;
-    margin-bottom: 20px;
+.hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 68px;
+    letter-spacing: 3px;
 }
 
 .hero p {
-    opacity: 0.8;
-    margin-bottom: 30px;
+    margin-top: 12px;
+    font-size: 16px;
+    opacity: 0.9;
 }
 
+/* BUTTON */
 .btn {
-    background: linear-gradient(135deg, #F2C94C, #27AE60);
+    margin-top: 25px;
+    display: inline-block;
+    padding: 14px 32px;
+    background: #F2C94C;
     color: black;
-    padding: 14px 28px;
     border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s;
 }
 
-/* BOTTLE PLACEHOLDER */
-.hero-image {
-    width: 300px;
-    height: 500px;
-    border-radius: 30px;
-    background: linear-gradient(to bottom, #2F80ED, #27AE60);
-    box-shadow: 0 0 40px rgba(47,128,237,0.6);
+.btn:hover {
+    transform: scale(1.06);
+}
+
+/* TRACKER */
+.tracker {
+    margin-top: 30px;
+}
+
+.bar {
+    width: 240px;
+    height: 10px;
+    background: rgba(255,255,255,0.25);
+    margin: 12px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    width: 0%;
+    background: #F2C94C;
+    transition: width 0.4s ease;
 }
 
 /* FEATURES */
 .features {
-    padding: 80px 50px;
+    background: rgba(0,0,0,0.15);
+    padding: 80px 30px;
     text-align: center;
 }
 
 .features h3 {
-    font-size: 36px;
-    margin-bottom: 40px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    letter-spacing: 2px;
 }
 
-.feature-grid {
+.grid {
+    margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
-    background: #111827;
-    padding: 30px;
-    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    padding: 30px 20px;
+    border-radius: 18px;
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px rgba(39,174,96,0.4);
+    transform: translateY(-8px);
 }
 
 .card h4 {
     margin-bottom: 10px;
-    color: #2F80ED;
+    font-weight: 500;
 }
 
-/* STRIP SECTION */
-.strip {
+/* CTA */
+.cta {
+    padding: 80px 20px;
     text-align: center;
-    padding: 60px;
-    background: linear-gradient(to right, #2F80ED, #27AE60);
 }
 
-.strip h3 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.cta h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 44px;
+    letter-spacing: 2px;
+}
+
+.cta p {
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* POPUP */
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #111;
+    padding: 14px 18px;
+    border-radius: 10px;
+    display: none;
+    font-size: 14px;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 30px;
-    background: #020617;
+    padding: 25px;
+    font-size: 14px;
+    opacity: 0.7;
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-    <h1>SWB Co.</h1>
+    <div class="brand">SWB Co.</div>
     <div>
-        <a href="#">Features</a>
-        <a href="#">Benefits</a>
-        <a href="#">Buy</a>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+        <a href="#buy">Buy</a>
     </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 
-    <div class="hero-text">
-        <h2>Your Water. Smarter.</h2>
-        <p>Hydration tracking, smart reminders, and peak performance — all in one bottle.</p>
-        <a href="#" class="btn">Shop Now</a>
+    <h1>STAY SHARP</h1>
+    <p>Hydration that keeps up with your day.</p>
+
+    <!-- TRACKER -->
+    <div class="tracker">
+        <p>Hydration Level: <span id="percent">0%</span></p>
+
+        <div class="bar">
+            <div class="fill" id="fill"></div>
+        </div>
     </div>
 
-    <!-- REPLACE THIS WITH YOUR BOTTLE IMAGE -->
-    <div class="hero-image"></div>
+    <div class="btn" onclick="drinkWater()">Drink Water</div>
 
 </section>
 
-<section class="features">
-    <h3>Smart Features</h3>
+<!-- FEATURES -->
+<section class="features" id="features">
 
-    <div class="feature-grid">
+    <h3>SMART FEATURES</h3>
+
+    <div class="grid">
         <div class="card">
             <h4>Hydration Tracking</h4>
-            <p>Tracks your intake automatically with precision sensors.</p>
+            <p>Automatically logs your intake.</p>
         </div>
 
         <div class="card">
             <h4>Smart Reminders</h4>
-            <p>LED and app alerts keep you on track all day.</p>
+            <p>LED + app alerts keep you on track.</p>
         </div>
 
         <div class="card">
             <h4>App Integration</h4>
-            <p>Syncs with your phone and fitness devices.</p>
+            <p>Syncs with your phone & wearables.</p>
         </div>
 
         <div class="card">
             <h4>24hr Cooling</h4>
-            <p>Cold water all day with premium insulation.</p>
+            <p>Keeps drinks cold all day.</p>
         </div>
     </div>
+
 </section>
 
-<section class="strip">
-    <h3>Stay Focused. Stay Hydrated.</h3>
-    <p>No more guessing — just results.</p>
-    <br>
-    <a href="#" class="btn">Order Today</a>
+<!-- CTA -->
+<section class="cta" id="buy">
+
+    <h3>DON’T FALL BEHIND</h3>
+    <p>Your bottle should keep up with you.</p>
+
+    <div class="btn" onclick="orderNow()">Order Today</div>
+
 </section>
 
+<!-- POPUP -->
+<div class="popup" id="popup">
+    Added to cart ✔
+</div>
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 SWB Co. | @SWBCo</p>
+    © 2026 SWB Co. | @SWBCo
 </footer>
+
+<script>
+
+/* TRACKER */
+let level = 0;
+
+function drinkWater() {
+    if (level < 100) level += 10;
+
+    document.getElementById("fill").style.width = level + "%";
+    document.getElementById("percent").innerText = level + "%";
+}
+
+/* CTA BUTTON */
+function orderNow() {
+    let popup = document.getElementById("popup");
+    popup.style.display = "block";
+
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 2000);
+}
+
+</script>
 
 </body>
 </html>
